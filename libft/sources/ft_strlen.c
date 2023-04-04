@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_s.c                                      :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mibernar <mibernar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/10 12:50:08 by mibernar          #+#    #+#             */
-/*   Updated: 2022/01/31 12:25:27 by mibernar         ###   ########.fr       */
+/*   Created: 2021/10/18 15:05:02 by mibernar          #+#    #+#             */
+/*   Updated: 2021/11/16 10:47:43 by mibernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	ft_printf_s(char *args)
+size_t	ft_strlen(const char *s)
 {
-	int		size;
+	int	x;
 
-	if (!args)
-	{
-		write (1, "(null)", 6);
-		return (6);
-	}
-	size = 0;
-	while (args[size] != '\0')
-		size++;
-	write (1, args, size);
-	return (size);
+	x = 0;
+	if (!s)
+		return (0);
+	while (s[x] != '\0')
+		x++;
+	return (x);
 }

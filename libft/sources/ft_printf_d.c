@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_printf_d.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mibernar <mibernar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/18 16:07:57 by mibernar          #+#    #+#             */
-/*   Updated: 2022/03/29 12:27:32 by mibernar         ###   ########.fr       */
+/*   Created: 2022/01/12 13:04:23 by mibernar          #+#    #+#             */
+/*   Updated: 2023/04/04 17:33:58 by mibernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+int	ft_printf_d(int args)
 {
-	unsigned int	x;
+	char	*str;
+	int		size;
 
-	x = 0;
-	if (n == 0)
-		return (0);
-	while ((unsigned char)s1[x] == (unsigned char)s2[x]
-		&& ((unsigned char)s1[x] != '\0'
-			&& (unsigned char)s2[x] != '\0' ) && x < n - 1)
-		x++;
-	return ((unsigned char)s1[x] - (unsigned char)s2[x]);
+	str = ft_itoa(args);
+	size = ft_strlen(str);
+	write(1, str, size);
+	free (str);
+	return (size);
 }

@@ -6,7 +6,7 @@
 /*   By: mibernar <mibernar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/10/18 12:03:03 by mibernar          #+#    #+#             */
-/*   Updated: 2021/11/05 13:04:58 by mibernar         ###   ########.fr       */
+/*   Updated: 2023/04/04 17:39:13 by mibernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,11 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <string.h> 
+# include <string.h>
+# include <fcntl.h>
+# include <stdarg.h>
+
+# define BUFFER_SIZE 1
 
 // PROTOTYPES
 
@@ -38,6 +42,7 @@ int		ft_tolower(int c);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
+int		ft_strcmp(const char *s1, const char *s2);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *str1, const void *str2, size_t n);
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
@@ -55,6 +60,26 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+
+char	*get_next_line(int fd);
+char	*ft_strjoin_gnl(char *s1, char *s2);
+char	*ft_strdup_gnl(char *s1);
+int		ft_strchr_gnl(char *temp, int c);
+
+int		ft_printf(const char *format, ...);
+int		ft_printf_c(int args);
+int		ft_printf_i(int args);
+int		ft_printf_d(int args);
+int		ft_printf_p(void *args);
+int		ft_printf_s(char *args);
+int		ft_printf_u(int args);
+int		ft_printf_x_lower(int args);
+int		ft_printf_x_upper(int args);
+char	*ft_itoa(int n);
+size_t	ft_strlen(const char *s);
+char	*ft_strdup(const char *s1);
+void	ft_putchar_fd(char c, int fd);
+char	*ft_unsigned_itoa(unsigned int n);
 
 // BONUS
 

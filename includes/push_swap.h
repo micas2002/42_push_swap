@@ -6,7 +6,7 @@
 /*   By: mibernar <mibernar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 16:10:55 by mibernar          #+#    #+#             */
-/*   Updated: 2022/05/27 13:40:28 by mibernar         ###   ########.fr       */
+/*   Updated: 2023/04/04 18:20:48 by mibernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
-# include "libft/libft.h"
-# include "printf/ft_printf.h"
+# include "libft.h"
 
 // PROTOTYPES
 

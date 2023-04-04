@@ -6,11 +6,11 @@
 /*   By: mibernar <mibernar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 12:01:50 by mibernar          #+#    #+#             */
-/*   Updated: 2022/02/02 12:03:28 by mibernar         ###   ########.fr       */
+/*   Updated: 2023/04/04 17:39:34 by mibernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 static int	lenght_int(long int n)
 {

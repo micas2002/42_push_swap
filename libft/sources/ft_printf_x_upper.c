@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_x_lower.c                                :+:      :+:    :+:   */
+/*   ft_printf_x_upper.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mibernar <mibernar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/12 13:04:31 by mibernar          #+#    #+#             */
-/*   Updated: 2022/01/31 11:33:33 by mibernar         ###   ########.fr       */
+/*   Created: 2022/01/12 13:04:33 by mibernar          #+#    #+#             */
+/*   Updated: 2023/04/04 17:33:47 by mibernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 static char	*rev_str(char *hex_num)
 {
@@ -44,14 +44,14 @@ static char	*convert(long quotient, char *hex_num)
 		if (remainder < 10)
 			hex_num[j++] = 48 + remainder;
 		else
-			hex_num[j++] = 87 + remainder;
+			hex_num[j++] = 55 + remainder;
 		quotient = quotient / 16;
 	}
 	hex_num[j] = '\0';
 	return (hex_num);
 }
 
-int	ft_printf_x_lower(int args)
+int	ft_printf_x_upper(int args)
 {
 	long	quotient;
 	int		i;

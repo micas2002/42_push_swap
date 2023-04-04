@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_u.c                                      :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mibernar <mibernar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/12 13:04:28 by mibernar          #+#    #+#             */
-/*   Updated: 2022/02/02 12:02:17 by mibernar         ###   ########.fr       */
+/*   Created: 2021/10/18 16:07:57 by mibernar          #+#    #+#             */
+/*   Updated: 2021/10/28 15:03:57 by mibernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	ft_printf_u(int args)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int		a;
-	char	*str;
+	unsigned int	x;
 
-	a = args;
-	if (a < 0)
-		a = 4294967296 + a;
-	str = ft_unsigned_itoa(a);
-	a = ft_strlen(str);
-	write (1, str, a);
-	free (str);
-	return (a);
+	x = 0;
+	if (n == 0)
+	{
+		return (0);
+	}
+	while ((unsigned char)s1[x] == (unsigned char)s2[x]
+		&& ((unsigned char)s1[x] != '\0'
+			&& (unsigned char)s2[x] != '\0' ) && x < n - 1)
+	{
+		x++;
+	}
+	return ((unsigned char)s1[x] - (unsigned char)s2[x]);
 }

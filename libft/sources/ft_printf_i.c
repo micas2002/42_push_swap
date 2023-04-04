@@ -6,11 +6,11 @@
 /*   By: mibernar <mibernar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/10 13:05:12 by mibernar          #+#    #+#             */
-/*   Updated: 2022/01/26 17:18:59 by mibernar         ###   ########.fr       */
+/*   Updated: 2023/04/04 17:33:56 by mibernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
 int	convert_hex_to_dec(int i, int decimal, int base, char *hex)
 {

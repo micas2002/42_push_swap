@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf_d.c                                      :+:      :+:    :+:   */
+/*   ft_printf_c.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mibernar <mibernar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/01/12 13:04:23 by mibernar          #+#    #+#             */
-/*   Updated: 2022/01/26 17:18:38 by mibernar         ###   ########.fr       */
+/*   Created: 2022/01/10 12:35:19 by mibernar          #+#    #+#             */
+/*   Updated: 2022/01/10 12:42:40 by mibernar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-int	ft_printf_d(int args)
+int	ft_printf_c(int args)
 {
-	char	*str;
-	int		size;
+	char	a;
 
-	str = ft_itoa(args);
-	size = ft_strlen(str);
-	write(1, str, size);
-	free (str);
-	return (size);
+	a = args + 0;
+	ft_putchar_fd(a, 1);
+	return (1);
 }
