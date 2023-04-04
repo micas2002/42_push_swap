@@ -6,7 +6,7 @@
 #    By: mibernar <mibernar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/25 16:11:00 by mibernar          #+#    #+#              #
-#    Updated: 2023/04/04 18:20:21 by mibernar         ###   ########.fr        #
+#    Updated: 2023/04/04 18:40:19 by mibernar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,14 +64,13 @@ $(LIBFT):
 	@echo "$(CYAN)$(NAME): $(RESET)Creating $(GREEN)$(LIBFT)$(RESET)"
 	@make -sC $(LIBFT_DIRECTORY)
 
-clean: ## Cleans all the files from Libft and FdF
+clean: ## Cleans all the files
 	@make -sC $(LIBFT_DIRECTORY) clean
 	@rm -rf $(OBJECTS_DIRECTORY)
 	@echo "$(CYAN)$(NAME): $(RED)$(OBJECTS_DIRECTORY)$(RESET) was deleted"
 	@echo "$(CYAN)$(NAME): $(RED)object files$(RESET) deleted"
 
 fclean: clean ## Deep cleans 
-	@echo "$(CYAN)$(NAME): $(RED)$(MINILIBX)$(RESET) was deleted"
 	@rm -f $(LIBFT)
 	@make -sC $(LIBFT_DIRECTORY) fclean
 	@echo "$(CYAN)$(NAME): $(RED)$(LIBFT)$(RESET) was deleted"
